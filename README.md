@@ -1,4 +1,4 @@
-# myproject
+# master
 
 ## Project setup
 ```
