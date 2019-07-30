@@ -2,12 +2,6 @@
 module.exports = {
     publicPath: './',
     outputDir: 'dist',
-    devServer: {
-        host: 'localhost',
-        port: 8090,
-        https: false,
-        disableHostCheck: true
-    },
     //修复HMR(热更新)失效
     chainWebpack: (config) => {
        config.resolve.symlinks(true);
@@ -30,9 +24,13 @@ module.exports = {
     productionSourceMap: false,
     lintOnSave:false,
     devServer: {
+        host: 'localhost',
+        port: 8090,
+        https: false,
+        disableHostCheck: true,
         proxy: {
             '/api': {
-                target: 'http://localhost:8080',
+                target: 'http://localhost:8090',
                     changeOrigin: true,
                     pathRewrite: {
                     '^/api': '/test'
