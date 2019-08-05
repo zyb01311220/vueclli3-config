@@ -91,6 +91,12 @@ export default {
   name: "HelloWorld",
   props: {
     msg: String
+  },
+  mounted(){
+    window.addEventListener('message',function(event){
+       if(event.origin.indexOf('8080')>-1){
+       }
+    })
   }
 };
 </script>
