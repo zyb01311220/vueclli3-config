@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "analyz": "vue-cli-service build --report"
   },
   "dependencies": {
     "axios": "^0.19.0",
@@ -14,7 +15,8 @@
     "element-ui": "^2.11.0",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "webpack-bundle-analyzer": "^3.4.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.8.0",
@@ -23,6 +25,7 @@
     "@vue/eslint-config-prettier": "^4.0.1",
     "babel-eslint": "^10.0.1",
     "babel-plugin-component": "^1.1.1",
+    "element-theme-chalk": "^2.11.1",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "node-sass": "^4.9.0",

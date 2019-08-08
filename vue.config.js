@@ -1,4 +1,5 @@
 
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 module.exports = {
     publicPath: './',
     outputDir: 'dist',
@@ -6,11 +7,13 @@ module.exports = {
     chainWebpack: (config) => {
        config.resolve.symlinks(true);
     },
-    configureWebpack: (config) => {
+    configureWebpack: config => {
         if (process.env.NODE_ENV === 'production') {
-            config.mode = 'production'
-        } else {
-            config.mode = 'development'
+            return {
+                plugins: [
+                    new BundleAnalyzerPlugin()
+                ]
+            }
         }
     },
     css: {
