@@ -2,6 +2,11 @@
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const CompressionWebpackPlugin = require('compression-webpack-plugin');
 const productionGzipExtensions = /\.(js|css|json|txt|html|ico|svg)(\?.*)?$/i;
+const broserList=[
+    "> 1%",
+    "last 10 versions",
+    "not ie <= 8"
+];
 module.exports = {
     publicPath: './',
     outputDir: 'dist',
@@ -64,6 +69,11 @@ module.exports = {
         loaderOptions: {
             sass: {
                 data:`@import "@/assets/scss/variables.scss";`
+            },
+            postcss: {
+                plugins: [
+                    require('autoprefixer')
+                ]
             }
         }
     },
