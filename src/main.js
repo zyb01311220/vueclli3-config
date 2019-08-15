@@ -4,6 +4,7 @@ import router from "./router";
 import store from "./store";
 import './ele'
 import '../theme/index.css';
+import 'lib-flexible';
 Vue.config.productionTip = false;
 new Vue({
   router,
