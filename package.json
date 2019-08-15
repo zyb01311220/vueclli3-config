@@ -12,6 +12,7 @@
     "better-scroll": "^1.15.2",
     "core-js": "^2.6.5",
     "element-ui": "^2.11.0",
+    "postcss-px2rem": "^0.3.0",
     "sortablejs": "^1.10.0-rc3",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
