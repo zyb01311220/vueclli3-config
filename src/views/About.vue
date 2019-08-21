@@ -6,6 +6,7 @@
     <ul>
       <li v-for="item in $store.state.list">{{item}}</li>
     </ul>
+    <p :class="$style.content">css  Module</p>
   </div>
 </template>
 <script>
@@ -24,5 +25,9 @@ export default {
   }
 };
 </script>
-<style scoped lang="scss">
+<style module>
+  .content{
+    color:#f66;
+    font-size:30px;
+  }
 </style>

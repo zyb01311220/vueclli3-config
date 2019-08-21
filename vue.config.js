@@ -62,6 +62,13 @@ module.exports = {
     css: {
         extract: true,
         loaderOptions: {
+            css:{
+                cssModules:{
+                    modules: true,
+                    importLoaders: 1,
+                    localIdentName: '[hash:base64]'
+                }
+            },
             sass: {
                 data:`@import "@/assets/scss/variables.scss";`
             },
