@@ -31,7 +31,6 @@
       </el-table-column>
     </el-table>
     <el-button :type="change">保存选择</el-button>
-      <div class="content"></div>
    </div>
 </template>
 <script>
@@ -124,17 +123,8 @@ ul {
   list-style-type: none;
   padding: 0;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
 a {
   /*color: #42b983;*/
   color:$bg;
-}
-.content{
-   width:150px;
-   height:150px;
-   border:1px solid #f66;
 }
 </style>

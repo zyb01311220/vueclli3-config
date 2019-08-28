@@ -27,6 +27,11 @@ export default new Router({
         path: "/list",
         name: "list",
         component: ()=>import("./views/List.vue")
-    }
+    },
+      {
+          path: "/move",
+          name: "move",
+          component: ()=>import("./views/Move.vue")
+      }
   ]
 });
