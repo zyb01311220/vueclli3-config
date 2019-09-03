@@ -2,6 +2,7 @@
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const CompressionWebpackPlugin = require('compression-webpack-plugin');
 const productionGzipExtensions = /\.(js|css|json|txt|html|ico|svg)(\?.*)?$/i;
+const TerserPlugin=require('terser-webpack-plugin');
 module.exports = {
     publicPath: './',
     outputDir: 'dist',
@@ -46,7 +47,17 @@ module.exports = {
                     threshold: 10240,
                     minRatio: 0.8
                 }),
-                new BundleAnalyzerPlugin()
+                new BundleAnalyzerPlugin(),
+                new TerserPlugin({
+                    terserOptions: {
+                        compress: {
+                            warnings: false,
+                            drop_console: true,
+                            drop_debugger: true,
+                            pure_funcs: ['console.log']
+                        }
+                    }
+                })
             );
             config.plugins = [
                 ...config.plugins,
